@@ -1,0 +1,29 @@
+<h2>Lista de Contatos</h2>
+<p></p>
+<table class="table table-striped">
+  <thead class="table-secondary">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">CEP</th>
+      <th scope="col">UF</th>
+      <th scope="col">Ativo</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody class="table-light">
+    <tr *ngFor="let pessoa of pessoas">
+      <td>{{ pessoa.pessoa_id }}</td>
+      <td>{{ pessoa.first_name }} {{ pessoa.middle_name }} {{ pessoa.last_name }}</td>
+      <td>{{ pessoa.address }}, {{ pessoa.number }} - {{ pessoa.additional_address_data }}</td>
+      <td>{{ pessoa.postal_code }}</td>
+      <td>{{ pessoa.uf }}</td>
+      <td>{{ pessoa.active }}</td>
+      <td>
+        <button (click)="updatePessoa(pessoa.pessoa_id)" class="btn btn-info">Editar</button>
+        <button (click)="deletePessoa(pessoa.pessoa_id)" class="btn btn-danger delete-button">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

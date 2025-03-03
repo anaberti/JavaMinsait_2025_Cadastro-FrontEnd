@@ -1,0 +1,80 @@
+import { Component } from '@angular/core';
+import { PessoaServiceService } from 'src/app/service/pessoaService/pessoa-service.service';
+import { Pessoa } from 'src/app/models/pessoa/pessoa';
+import { ActivatedRoute, Router } from '@angular/router';
+
+<h3>Atualizar Cadastro</h3>
+<p></p>
+<form (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label>Primeiro Nome</label>
+    <input type="text" class="form-control" id="firstName" [(ngModel)]="pessoa.first_name" name="firstName"
+      title="Entre o primeiro nome" placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>Nome do Meio</label>
+    <input type="text" class="form-control" id="middleName" [(ngModel)]="pessoa.middle_name" name="middleName"
+      title="Entre o nome do meio" placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>Sobrenome</label>
+    <input type="text" class="form-control" id="lastName" [(ngModel)]="pessoa.last_name" name="lastName"
+      title="Entre opacity sobrenome" placeholder=" ">
+  </div>
+  <div class="" mb-3">
+    <label>CPF</label>
+    <input type="text" class="form-control" id="cpf" [(ngModel)]="pessoa.cpf" name="cpf" title="Entre o CPF"
+      placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>Pronome</label>
+    <input type="text" class="form-control" id="pronoum" [(ngModel)]="pessoa.pronoum" name="pronoum"
+      title="Defina o pronome" placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>Profissão</label>
+    <input type="text" class="form-control" id="profession" [(ngModel)]="pessoa.profession" name="profession"
+      title="Entre a profissão" placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>Data de Nascimento</label>
+    <input type="text" class="form-control" id="birthdate" [(ngModel)]="pessoa.birthdate" name="birthdate"
+      title="Entre address data de nascimento" placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>Endereço</label>
+    <input type="text" class="form-control" id="address" [(ngModel)]="pessoa.address" name="address"
+      title="Entre o endereço" placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>Número</label>
+    <input type="text" class="form-control" id="number" [(ngModel)]="pessoa.number" name="number"
+      title="Entre o número da casa" placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>Complemento</label>
+    <input type="text" class="form-control" id="additional_address_data" [(ngModel)]="pessoa.additional_address_data"
+      name="additional_address_data" title="Entre o complemento do endereço" placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>Cidade</label>
+    <input type="text" class="form-control" id="city" [(ngModel)]="pessoa.city" name="city" title="Entre a cidade"
+      placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>UF</label>
+    <input type="text" class="form-control" id="uf" [(ngModel)]="pessoa.uf" name="uf" title="Entre a UF"
+      placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>CEP</label>
+    <input type="text" class="form-control" id="postal_code" [(ngModel)]="pessoa.postal_code" name="postal_code"
+      title="Entre o CEP" placeholder=" ">
+  </div>
+  <div class="mb-3">
+    <label>País</label>
+    <input type="text" class="form-control" id="country" [(ngModel)]="pessoa.country" name="country"
+      title="Entre o país" placeholder=" ">
+  </div>
+  <button class="btn btn-success" type='submit'>Cadastrar</button>
+</form>
